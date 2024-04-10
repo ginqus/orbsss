@@ -24,8 +24,8 @@ var RGB : Texture = preload("res://Sprites/Player/rgb.png")
 signal time_scale_changed
 
 var config = ConfigFile.new()
-const CONFIG_LOCATION := "user://ballin-settings.cfg"
-const SAVE_LOCATION = "user://ballin.save"
+const CONFIG_LOCATION := "user://orbsss-settings.cfg"
+const SAVE_LOCATION = "user://orbsss.save"
 
 
 var maxSpeed: float = 20.0

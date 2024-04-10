@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 
-const config_location := "user://ballin-settings.cfg"
+const config_location := "user://orbsss-settings.cfg"
 var config = ConfigFile.new()
 @onready var fps_toggle := $FPSToggle
 @onready var blur_toggle := $BlurToggle

@@ -4,7 +4,7 @@ var config = ConfigFile.new()
 @export var FPSLabel = Node
 
 func _ready():
-	var err = config.load("user://ballin-settings.cfg")
+	var err = config.load("user://orbsss-settings.cfg")
 	if err == OK:
 		if config.get_value("Settings", "ShowFPS", false): _show()
 		else: _hide()

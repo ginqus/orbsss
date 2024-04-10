@@ -10,7 +10,7 @@ extends VBoxContainer
 var back
 var tween
 var config = ConfigFile.new()
-const config_location := "user://ballin-settings.cfg"
+const config_location := "user://orbsss-settings.cfg"
 
 func _ready():
 	config.load(config_location)

@@ -1,7 +1,7 @@
 extends Node
 
 
-const config_location := "user://ballin-settings.cfg"
+const config_location := "user://orbsss-settings.cfg"
 @onready var settings := $Settings
 @onready var back := $Back
 @onready var language := $Language
@@ -15,7 +15,7 @@ var savedLang : String
 
 func _ready():
 # Установить язык из сохранения. Если сохранения нет, установить язык из настроек
-	config.load("user://ballin-settings.cfg")
+	config.load("user://orbsss-settings.cfg")
 	if config.has_section_key("Settings", "Language"): savedLang = config.get_value("Settings", "Language")
 	else: savedLang = OS.get_locale_language()
 	if savedLang != null: TranslationServer.set_locale(savedLang)

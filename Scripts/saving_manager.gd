@@ -1,7 +1,7 @@
 extends Node
 
 
-const SAVE_LOCATION := "user://ballin.save"
+const SAVE_LOCATION := "user://orbsss.save"
 
 @onready var plr = %Player
 @onready var save_indicator := $"../UI/Save indicator"
