@@ -14,7 +14,7 @@ var update_available: bool = false
 func _on_pressed() -> void:
 	if is_requesting: return
 
-	http.request("https://api.github.com/repos/face-hh/griddycode/releases/latest")
+	http.request("https://api.github.com/repos/I-like-Portal-2/orbsss/releases/latest")
 	is_requesting = true
 
 	if not update_available: text = " Loading... "

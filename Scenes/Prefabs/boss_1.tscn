@@ -514,7 +514,7 @@ texture = ExtResource("3_85ja1")
 libraries = {
 "": SubResource("AnimationLibrary_5xt2k")
 }
-blend_times = [&"idle", &"attack_lazer", 0.5, &"attack_lazer", &"idle", 0.5]
+blend_times = [&"attack_lazer", &"idle", 0.5, &"idle", &"attack_lazer", 0.5]
 
 [node name="right chelicera" type="Sprite2D" parent="."]
 z_index = -1
