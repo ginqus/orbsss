@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbth6blwedp83"]
+
+[ext_resource type="Texture2D" uid="uid://bqn2t8bqbbc1x" path="res://Sprites/Orbs/purple_orb.svg" id="1_3q8qm"]
+[ext_resource type="Script" path="res://Scripts/purple_orb.gd" id="1_k1rw2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jqcpm"]
+radius = 48.0
+
+[node name="Purple Orb" type="StaticBody2D" groups=["orb", "purple_orb"]]
+script = ExtResource("1_k1rw2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jqcpm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, -3.8147e-06)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_3q8qm")

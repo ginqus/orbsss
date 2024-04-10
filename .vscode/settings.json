@@ -1,0 +1,94 @@
+{
+	"editor.tokenColorCustomizations": {
+		"comments": "#425661"
+	},
+
+	"workbench.colorCustomizations": {
+		"[Default Dark Modern]": {
+			"sideBar.background": "#18181D",
+			"activityBar.background": "#18181D",
+			"titleBar.activeBackground": "#18181D",
+			"editorGroupHeader.noTabsBackground": "#18181D",
+			"editorGroupHeader.tabsBackground": "#18181D",
+			"tab.inactiveBackground": "#18181D",
+			"terminal.background": "#18181D",
+			"panel.background": "#18181D",
+			"editor.background": "#1F1F24",
+			"tab.activeBackground": "#1F1F24",
+			"tab.hoverBackground": "#1F1F24",
+			"statusBar.noFolderBackground": "#1F1F24"
+		},
+		"[GDScript]": {
+			"titleBar.activeBackground": "#363D4A",
+			"activityBar.background": "#363D4A",
+			"list.hoverBackground": "#363D4A",
+			"sideBarSectionHeader.background": "#363D4A",
+			"titleBar.inactiveBackground": "#363D4A",
+			"dropdown.background": "#363D4A",
+			"input.background": "#363D4A",
+
+			"editorGroupHeader.tabsBackground": "#252B34",
+			"tab.inactiveBackground": "#252B34",
+			"statusBar.background": "#252B34",
+			"editorHoverWidget.background": "#252B34",
+			"editorSuggestWidget.background": "#252B34",
+			"editorWidget.background": "#252B34",
+			"notifications.background": "#252B34",
+			"sideBar.background": "#252B34",
+			"statusBar.debuggingBackground": "#252B34",
+			"statusBar.noFolderBackground": "#252B34",
+			
+			"tab.activeBackground": "#21262E",
+			"editor.background": "#21262E",
+			"peekViewResult.background": "#21262E",
+			"peekViewTitle.background": "#21262E"
+//			"panel.background": "#21262E",
+//			"sideBar.background": "#18181D",
+//			"editorGroupHeader.noTabsBackground": "#18181D",
+//			"terminal.background": "#18181D",
+//			"tab.hoverBackground": "#1F1F24",
+//			"statusBar.noFolderBackground": "#1F1F24"
+		}
+	},
+	
+	"editor.fontFamily": "JetBrains Mono Medium, 'Courier New', monospace", //Fira Code Medium
+	"security.workspace.trust.untrustedFiles": "open",
+
+	"editor.semanticTokenColorCustomizations": {
+		"enabled": false
+	},
+	
+	"editor.codeLens": false,
+	"editor.scrollbar.verticalScrollbarSize": 12,
+	"editor.scrollBeyondLastLine": false,
+	"editor.smoothScrolling": true,
+	"editor.stickyScroll.enabled": true,
+	"workbench.list.smoothScrolling": true,
+	"editor.cursorStyle": "line-thin",
+	"[python]": {
+		"editor.formatOnType": true
+	},
+	"editor.fontLigatures": true,
+	// The number of spaces a tab is equal to. This setting is overridden
+	// based on the file contents when `editor.detectIndentation` is true.
+	"editor.tabSize": 4,
+
+	// Insert spaces when pressing Tab. This setting is overriden
+	// based on the file contents when `editor.detectIndentation` is true.
+	"editor.insertSpaces": false,
+
+	// When opening a file, `editor.tabSize` and `editor.insertSpaces`
+	// will be detected based on the file contents. Set to false to keep
+	// the values you've explicitly set, above.
+	"editor.detectIndentation": false,
+	"godot_tools.editor_path": "D:\\Program Files\\Godot\\Godot_v4.1.1-stable_win64.exe",
+	"godot_tools.gdscript_lsp_server_port": 6005,
+	"python.defaultInterpreterPath": "D:\\Portal\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+	"editor.fontSize": 14,
+	"jupyter.askForKernelRestart": false,
+	"editor.mouseWheelScrollSensitivity": 1.31,
+	"editor.unicodeHighlight.allowedCharacters": {
+		"️": true
+	},
+	"workbench.colorTheme": "GDScript"
+}

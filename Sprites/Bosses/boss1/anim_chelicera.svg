@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="115.65314"
+   height="200.91257"
+   viewBox="0 0 30.599895 53.158117"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient63">
+      <stop
+         style="stop-color:#492c4d;stop-opacity:1;"
+         offset="0"
+         id="stop61" />
+      <stop
+         style="stop-color:#372c4d;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop62" />
+      <stop
+         style="stop-color:#20294d;stop-opacity:1;"
+         offset="1"
+         id="stop63" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914-1">
+      <stop
+         style="stop-color:#c926ff;stop-opacity:1;"
+         offset="0"
+         id="stop3910" />
+      <stop
+         style="stop-color:#6f26ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop31621" />
+      <stop
+         style="stop-color:#2653ff;stop-opacity:1;"
+         offset="1"
+         id="stop3912" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914">
+      <stop
+         style="stop-color:#f494ff;stop-opacity:1;"
+         offset="0"
+         id="stop975" />
+      <stop
+         style="stop-color:#b894ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop977" />
+      <stop
+         style="stop-color:#6b8aff;stop-opacity:1;"
+         offset="1"
+         id="stop979" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient25774"
+       id="linearGradient35320"
+       gradientUnits="userSpaceOnUse"
+       x1="121.2642"
+       y1="74.768417"
+       x2="133.53146"
+       y2="78.05542"
+       gradientTransform="translate(1.0221306,0.27387649)" />
+    <linearGradient
+       id="linearGradient25774">
+      <stop
+         style="stop-color:#1b1d26;stop-opacity:1;"
+         offset="0"
+         id="stop25772" />
+      <stop
+         style="stop-color:#16141f;stop-opacity:1;"
+         offset="1"
+         id="stop25770" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient24850"
+       id="linearGradient35322"
+       gradientUnits="userSpaceOnUse"
+       x1="113.98723"
+       y1="93.748245"
+       x2="116.03178"
+       y2="94.296082" />
+    <linearGradient
+       id="linearGradient24850">
+      <stop
+         style="stop-color:#3c4e59;stop-opacity:1;"
+         offset="0"
+         id="stop24848" />
+      <stop
+         style="stop-color:#292b38;stop-opacity:1;"
+         offset="1"
+         id="stop24846" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient35482"
+       id="linearGradient35324"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(15,391.14917,1.6358477)"
+       x1="156.8979"
+       y1="119.0625"
+       x2="156.8979"
+       y2="140.22916" />
+    <linearGradient
+       id="linearGradient35482">
+      <stop
+         style="stop-color:#2a2a40;stop-opacity:1;"
+         offset="0"
+         id="stop35478" />
+      <stop
+         style="stop-color:#191923;stop-opacity:1;"
+         offset="0.94638693"
+         id="stop35480" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient65"
+       id="linearGradient64"
+       gradientUnits="userSpaceOnUse"
+       x1="15.655504"
+       y1="-133.30872"
+       x2="70.688835"
+       y2="-133.30872"
+       gradientTransform="matrix(0.25881905,0.96592583,0.96592583,-0.25881905,208.97758,0.27389466)" />
+    <linearGradient
+       id="linearGradient65">
+      <stop
+         style="stop-color:#325566;stop-opacity:1;"
+         offset="0"
+         id="stop64" />
+      <stop
+         style="stop-color:#565f66;stop-opacity:1;"
+         offset="1"
+         id="stop65" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-55.946554,20.808089)">
+    <g
+       id="Left_Chelicera"
+       style="display:inline;stroke-width:2.11667;stroke-dasharray:none"
+       transform="matrix(-1,0,0,1,197.01701,-70.432955)">
+      <title
+         id="title18048">Left Chelicera</title>
+      <path
+         id="path35294"
+         style="fill:url(#linearGradient35320);fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         d="M 126.75873,50.172649 113.06299,101.28633 131.2096,90.809445 141.07046,54.007557 Z" />
+      <path
+         id="path35296"
+         style="fill:url(#linearGradient35322);fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 125.73654,49.898582 2.04483,0.54777 -13.14803,49.069356 -2.59261,1.496552 z"
+         transform="translate(1.0221306,0.27387616)" />
+      <path
+         style="display:inline;stroke-width:4.23300018;stroke-dasharray:none;fill:#181822;fill-opacity:1;stroke:url(#linearGradient35324);stroke-linecap:round;stroke-opacity:1;paint-order:stroke fill markers;stroke-linejoin:miter"
+         d="m 134.48758,54.432597 -5.47834,20.445421"
+         id="path35298" />
+      <path
+         id="path35300"
+         style="fill:#13131f;fill-opacity:1;stroke-width:2.51716;paint-order:stroke fill markers"
+         d="m 197.2041,186.66901 h 11.97368 v 2.99243 H 197.2041 Z m 0.0598,5.55174 h 11.97367 v 2.99244 H 197.2639 Z m 0.06,5.55186 h 11.97367 v 2.99244 H 197.3239 Z"
+         transform="matrix(0.86602541,-0.50000001,-0.25881905,0.96592583,0,7.8e-7)" />
+      <path
+         id="path35304-5-6"
+         style="display:inline;fill:url(#linearGradient64);fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 83.240929,50.1727 2.04454,-0.547834 14.24368,53.158114 -2.59238,-1.4967 z"
+         transform="matrix(-1,0,0,1,209.99971,-1.0051081e-8)" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="163.28001"
+   height="163.28004"
+   viewBox="0 0 43.201169 43.201178"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient63">
+      <stop
+         style="stop-color:#492c4d;stop-opacity:1;"
+         offset="0"
+         id="stop61" />
+      <stop
+         style="stop-color:#372c4d;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop62" />
+      <stop
+         style="stop-color:#20294d;stop-opacity:1;"
+         offset="1"
+         id="stop63" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient3914-1"
+       id="linearGradient47"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0129573,0,0,1.0129574,-1.3605046,-0.59170209)"
+       x1="90.792816"
+       y1="34.491203"
+       x2="120.27546"
+       y2="56.605595" />
+    <linearGradient
+       id="linearGradient3914-1">
+      <stop
+         style="stop-color:#c926ff;stop-opacity:1;"
+         offset="0"
+         id="stop3910" />
+      <stop
+         style="stop-color:#6f26ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop31621" />
+      <stop
+         style="stop-color:#2653ff;stop-opacity:1;"
+         offset="1"
+         id="stop3912" />
+    </linearGradient>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter971-5"
+       x="-0.1803334"
+       y="-0.18033336"
+       width="1.3606668"
+       height="1.3606667">
+      <feGaussianBlur
+         stdDeviation="1.9446877"
+         id="feGaussianBlur973-7" />
+    </filter>
+    <linearGradient
+       xlink:href="#linearGradient3914"
+       id="linearGradient48"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0129573,0,0,1.0129574,-1.3605046,-0.59170209)"
+       x1="90.792816"
+       y1="34.491203"
+       x2="120.27546"
+       y2="56.605595" />
+    <linearGradient
+       id="linearGradient3914">
+      <stop
+         style="stop-color:#f494ff;stop-opacity:1;"
+         offset="0"
+         id="stop975" />
+      <stop
+         style="stop-color:#b894ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop977" />
+      <stop
+         style="stop-color:#6b8aff;stop-opacity:1;"
+         offset="1"
+         id="stop979" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-18.50832,-12.26607)">
+    <g
+       id="Circle_Thing-Lights"
+       transform="translate(-64.891095,-11.79875)"
+       style="display:inline">
+      <ellipse
+         style="display:inline;fill:none;fill-opacity:1;stroke:url(#linearGradient47);stroke-width:2.11667;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;filter:url(#filter971-5)"
+         id="ellipse966-8"
+         cx="105"
+         cy="45.665409"
+         rx="15.875"
+         ry="15.875004" />
+      <ellipse
+         style="display:inline;fill:none;fill-opacity:1;stroke:url(#linearGradient48);stroke-width:2.11667;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         id="ellipse961-9"
+         cx="105"
+         cy="45.665409"
+         rx="15.875"
+         ry="15.875004" />
+    </g>
+  </g>
+</svg>

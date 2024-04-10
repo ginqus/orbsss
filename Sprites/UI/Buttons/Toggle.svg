@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50.799999mm"
+   height="50.799999mm"
+   viewBox="0 0 50.799999 50.799999"
+   version="1.1"
+   id="svg19739"
+   sodipodi:docname="Toggle.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview19741"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="25.809398"
+     inkscape:cy="73.539106"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="rect481" />
+  <defs
+     id="defs19736" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="rect481"
+       style="stroke:#b8b8ff;stroke-opacity:1">
+      <rect
+         style="fill:#ff8181;stroke:none;stroke-width:3.90763;stroke-opacity:0;paint-order:stroke fill markers;fill-opacity:0.3019608"
+         id="rect8578"
+         width="50.799999"
+         height="50.799999"
+         x="0"
+         y="3.5527137e-15"
+         rx="12.7"
+         ry="12.7" />
+      <rect
+         style="fill:#0d0d12;fill-opacity:1;stroke:none;stroke-width:4.29842;stroke-dasharray:none;stroke-opacity:0;paint-order:stroke fill markers"
+         id="rect8880"
+         width="46.566666"
+         height="46.566666"
+         x="2.1166649"
+         y="2.1166658"
+         ry="11.641666" />
+      <rect
+         style="fill:#1b1c24;fill-opacity:1;stroke:none;stroke-width:3.51688;stroke-dasharray:none;stroke-opacity:0;paint-order:stroke fill markers"
+         id="rect11907"
+         width="38.099998"
+         height="38.099998"
+         x="6.3499985"
+         y="6.3499994"
+         ry="9.5249996" />
+    </g>
+  </g>
+</svg>

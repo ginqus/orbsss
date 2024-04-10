@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://birhmriqxxoxr"]
+
+[ext_resource type="Texture2D" uid="uid://dp0t5n6u2ekuc" path="res://Sprites/UI/Buttons/TogglePressed.svg" id="1_jd0d5"]
+
+[resource]
+texture = ExtResource("1_jd0d5")
+texture_margin_left = 64.0
+texture_margin_top = 64.0
+texture_margin_right = 64.0
+texture_margin_bottom = 64.0

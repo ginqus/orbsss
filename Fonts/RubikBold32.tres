@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://ciy1x61fn6uh3"]
+
+[ext_resource type="FontFile" uid="uid://b3jg4cggwp3mj" path="res://Fonts/Rubik-Bold.ttf" id="1_vuvb3"]
+
+[resource]
+base_font = ExtResource("1_vuvb3")
+spacing_top = -32
+spacing_bottom = -32

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="142.35297"
+   height="140.85419"
+   viewBox="0 0 37.664225 37.267671"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient63">
+      <stop
+         style="stop-color:#492c4d;stop-opacity:1;"
+         offset="0"
+         id="stop61" />
+      <stop
+         style="stop-color:#372c4d;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop62" />
+      <stop
+         style="stop-color:#20294d;stop-opacity:1;"
+         offset="1"
+         id="stop63" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914-1">
+      <stop
+         style="stop-color:#c926ff;stop-opacity:1;"
+         offset="0"
+         id="stop3910" />
+      <stop
+         style="stop-color:#6f26ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop31621" />
+      <stop
+         style="stop-color:#2653ff;stop-opacity:1;"
+         offset="1"
+         id="stop3912" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914">
+      <stop
+         style="stop-color:#f494ff;stop-opacity:1;"
+         offset="0"
+         id="stop975" />
+      <stop
+         style="stop-color:#b894ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop977" />
+      <stop
+         style="stop-color:#6b8aff;stop-opacity:1;"
+         offset="1"
+         id="stop979" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient65">
+      <stop
+         style="stop-color:#325566;stop-opacity:1;"
+         offset="0"
+         id="stop64" />
+      <stop
+         style="stop-color:#565f66;stop-opacity:1;"
+         offset="1"
+         id="stop65" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient11258">
+      <stop
+         style="stop-color:#80d5ff;stop-opacity:1;"
+         offset="0"
+         id="stop12751" />
+      <stop
+         style="stop-color:#d9f0ff;stop-opacity:1;"
+         offset="1"
+         id="stop12753" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient69">
+      <stop
+         style="stop-color:#475a66;stop-opacity:1;"
+         offset="0"
+         id="stop68" />
+      <stop
+         style="stop-color:#576066;stop-opacity:1;"
+         offset="1"
+         id="stop69" />
+    </linearGradient>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter12826"
+       x="-2.8033872"
+       y="-0.2336156"
+       width="6.6067744"
+       height="1.4672312">
+      <feGaussianBlur
+         stdDeviation="2.8549183"
+         id="feGaussianBlur12828" />
+    </filter>
+    <linearGradient
+       xlink:href="#linearGradient11258-1"
+       id="linearGradient12816"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1547005,0,0,1,209.99981,68.421577)"
+       x1="-119.56796"
+       y1="-121.15147"
+       x2="-119.56796"
+       y2="-91.822075" />
+    <linearGradient
+       id="linearGradient11258-1">
+      <stop
+         style="stop-color:#b2e0ff;stop-opacity:1;"
+         offset="0"
+         id="stop11998" />
+      <stop
+         style="stop-color:#d9f0ff;stop-opacity:1;"
+         offset="1"
+         id="stop12000" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-53.917126,17.903844)">
+    <g
+       id="Left_Ear-Lights"
+       style="display:inline"
+       transform="translate(19.847221,-32.23544)">
+      <rect
+         style="fill:#5ac3ff;fill-opacity:1;stroke:none;stroke-width:4.54902;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;filter:url(#filter12826)"
+         id="rect12821"
+         width="2.4441161"
+         height="29.329393"
+         x="70.712563"
+         y="-52.729897"
+         transform="matrix(0.99999999,0,0.50000001,-0.86602541,0,0)" />
+      <rect
+         style="display:inline;fill:url(#linearGradient12816);fill-opacity:1;stroke:none;stroke-width:4.54902;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect12814"
+         width="2.4441161"
+         height="29.329393"
+         x="70.712563"
+         y="-52.729897"
+         transform="matrix(1,0,0.5,-0.86602541,9.8841887e-7,-1.0051081e-8)" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="123.2829"
+   height="264.70425"
+   viewBox="0 0 32.618603 70.036335"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient63">
+      <stop
+         style="stop-color:#492c4d;stop-opacity:1;"
+         offset="0"
+         id="stop61" />
+      <stop
+         style="stop-color:#372c4d;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop62" />
+      <stop
+         style="stop-color:#20294d;stop-opacity:1;"
+         offset="1"
+         id="stop63" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914-1">
+      <stop
+         style="stop-color:#c926ff;stop-opacity:1;"
+         offset="0"
+         id="stop3910" />
+      <stop
+         style="stop-color:#6f26ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop31621" />
+      <stop
+         style="stop-color:#2653ff;stop-opacity:1;"
+         offset="1"
+         id="stop3912" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914">
+      <stop
+         style="stop-color:#f494ff;stop-opacity:1;"
+         offset="0"
+         id="stop975" />
+      <stop
+         style="stop-color:#b894ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop977" />
+      <stop
+         style="stop-color:#6b8aff;stop-opacity:1;"
+         offset="1"
+         id="stop979" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient65">
+      <stop
+         style="stop-color:#325566;stop-opacity:1;"
+         offset="0"
+         id="stop64" />
+      <stop
+         style="stop-color:#565f66;stop-opacity:1;"
+         offset="1"
+         id="stop65" />
+    </linearGradient>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter3187-1"
+       x="-0.12114201"
+       y="-3.1496872"
+       width="1.242284"
+       height="7.2993744">
+      <feGaussianBlur
+         stdDeviation="2.7778535"
+         id="feGaussianBlur3189-0" />
+    </filter>
+    <linearGradient
+       xlink:href="#linearGradient11258"
+       id="linearGradient52"
+       gradientUnits="userSpaceOnUse"
+       x1="15.655504"
+       y1="-133.30872"
+       x2="70.688835"
+       y2="-133.30872" />
+    <linearGradient
+       id="linearGradient11258">
+      <stop
+         style="stop-color:#80d5ff;stop-opacity:1;"
+         offset="0"
+         id="stop12751" />
+      <stop
+         style="stop-color:#d9f0ff;stop-opacity:1;"
+         offset="1"
+         id="stop12753" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-86.37366,29.247199)">
+    <g
+       id="Left_Chelicera-Lights"
+       style="display:inline;stroke-width:2.11667;stroke-dasharray:none"
+       transform="matrix(-1,0,0,1,221.29763,-70.706857)">
+      <title
+         id="title18048-0">Left Chelicera</title>
+      <path
+         id="path35302-2"
+         style="display:inline;mix-blend-mode:normal;fill:#33b5ff;fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;filter:url(#filter3187-1)"
+         d="m 15.655504,-134.36704 v 2.11667 h 55.033333 l -2.116666,-2.11667 z"
+         transform="rotate(105,0.40598902,0.52909228)" />
+      <path
+         id="path35304-5"
+         style="display:inline;fill:url(#linearGradient52);fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         d="m 15.655504,-134.36704 v 2.11667 h 55.033333 l -2.116666,-2.11667 z"
+         transform="rotate(105,0.40598902,0.52909228)" />
+    </g>
+  </g>
+</svg>

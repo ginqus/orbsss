@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="140.9361"
+   height="195.94963"
+   viewBox="0 0 37.28934 51.845006"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient63">
+      <stop
+         style="stop-color:#492c4d;stop-opacity:1;"
+         offset="0"
+         id="stop61" />
+      <stop
+         style="stop-color:#372c4d;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop62" />
+      <stop
+         style="stop-color:#20294d;stop-opacity:1;"
+         offset="1"
+         id="stop63" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914-1">
+      <stop
+         style="stop-color:#c926ff;stop-opacity:1;"
+         offset="0"
+         id="stop3910" />
+      <stop
+         style="stop-color:#6f26ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop31621" />
+      <stop
+         style="stop-color:#2653ff;stop-opacity:1;"
+         offset="1"
+         id="stop3912" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914">
+      <stop
+         style="stop-color:#f494ff;stop-opacity:1;"
+         offset="0"
+         id="stop975" />
+      <stop
+         style="stop-color:#b894ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop977" />
+      <stop
+         style="stop-color:#6b8aff;stop-opacity:1;"
+         offset="1"
+         id="stop979" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient12160"
+       id="linearGradient9198"
+       x1="93.5718"
+       y1="-28.991156"
+       x2="119.50097"
+       y2="-54.920326"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(45,1.7050121e-5,4.1162633e-5)" />
+    <linearGradient
+       id="linearGradient12160">
+      <stop
+         style="stop-color:#6b7199;stop-opacity:1;"
+         offset="0"
+         id="stop12154" />
+      <stop
+         style="stop-color:#73bfe5;stop-opacity:1;"
+         offset="0.5"
+         id="stop12156" />
+      <stop
+         style="stop-color:#6b7199;stop-opacity:1;"
+         offset="1"
+         id="stop12158" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-20.75697,-8.6514314)">
+    <g
+       id="Spinny_Lines"
+       style="display:inline;stroke-width:0;stroke-dasharray:none"
+       transform="matrix(1.1090186,0,0,1.1090186,-53.76197,42.403023)">
+      <path
+         id="path8143"
+         style="fill:none;stroke:url(#linearGradient9198);stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;paint-order:stroke fill markers"
+         d="m 122.58616,63.251732 a 24.870832,24.870832 0 0 1 -35.172666,1e-6 m -5e-6,-35.172636 a 24.870832,24.870832 0 0 1 35.172671,10e-7"
+         transform="matrix(0.90169812,0,0,0.90169812,-10.672691,-48.235893)" />
+    </g>
+  </g>
+</svg>

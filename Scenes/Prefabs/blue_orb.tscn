@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkfnjjqknyida"]
+
+[ext_resource type="Texture2D" uid="uid://cu26mud1hj261" path="res://Sprites/Orbs/blue_orb.svg" id="1_cgqpd"]
+[ext_resource type="Script" path="res://Scripts/blue_orb.gd" id="1_uo2mj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ep1kg"]
+radius = 64.0
+
+[node name="Blue Orb" type="StaticBody2D" groups=["blue_orb", "orb"]]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_uo2mj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ep1kg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.2666e-06, -6.03497e-06)
+texture = ExtResource("1_cgqpd")

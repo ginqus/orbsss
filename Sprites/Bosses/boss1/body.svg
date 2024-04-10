@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="256"
+   height="256.00003"
+   viewBox="0 0 67.733329 67.733341"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient63">
+      <stop
+         style="stop-color:#492c4d;stop-opacity:1;"
+         offset="0"
+         id="stop61" />
+      <stop
+         style="stop-color:#372c4d;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop62" />
+      <stop
+         style="stop-color:#20294d;stop-opacity:1;"
+         offset="1"
+         id="stop63" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914-1">
+      <stop
+         style="stop-color:#c926ff;stop-opacity:1;"
+         offset="0"
+         id="stop3910" />
+      <stop
+         style="stop-color:#6f26ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop31621" />
+      <stop
+         style="stop-color:#2653ff;stop-opacity:1;"
+         offset="1"
+         id="stop3912" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914">
+      <stop
+         style="stop-color:#f494ff;stop-opacity:1;"
+         offset="0"
+         id="stop975" />
+      <stop
+         style="stop-color:#b894ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop977" />
+      <stop
+         style="stop-color:#6b8aff;stop-opacity:1;"
+         offset="1"
+         id="stop979" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#linearGradient1017"
+       id="radialGradient1011"
+       cx="97.591499"
+       cy="168.69662"
+       fx="97.591499"
+       fy="168.69662"
+       r="37.041664"
+       gradientTransform="matrix(0.81716397,0,0,0.81716397,4.2571896,-144.91233)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient1017">
+      <stop
+         style="stop-color:#374053;stop-opacity:1;"
+         offset="0.75"
+         id="stop1013" />
+      <stop
+         style="stop-color:#1b1d26;stop-opacity:1;"
+         offset="1"
+         id="stop1015" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient16222"
+       id="linearGradient16224"
+       x1="105"
+       y1="17.990791"
+       x2="105"
+       y2="73.340027"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.96551717,0,0,0.96551717,-17.373835,-51.150225)" />
+    <linearGradient
+       id="linearGradient16222">
+      <stop
+         style="stop-color:#8689bf;stop-opacity:1;"
+         offset="0"
+         id="stop16218" />
+      <stop
+         style="stop-color:#444c66;stop-opacity:1;"
+         offset="1"
+         id="stop16220" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#linearGradient34722"
+       id="radialGradient1759"
+       cx="84.005455"
+       cy="-7.0594974"
+       fx="84.005455"
+       fy="-7.0594974"
+       r="18.131647"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient34722">
+      <stop
+         style="stop-color:#1b1d26;stop-opacity:1;"
+         offset="0.80000001"
+         id="stop34718" />
+      <stop
+         style="stop-color:#26263f;stop-opacity:1;"
+         offset="1"
+         id="stop34720" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-55.946554,22.304817)">
+    <g
+       id="Main_Body"
+       transform="matrix(1.1090186,0,0,1.1090186,-3.350393,19.390965)"
+       style="display:inline;stroke-width:0;stroke-dasharray:none">
+      <ellipse
+         style="fill:#374053;fill-opacity:1;stroke:url(#radialGradient1011);stroke-width:5.72578;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path951"
+         cx="84.005455"
+         cy="-7.0594974"
+         rx="27.67462"
+         ry="27.674622" />
+      <circle
+         style="fill:none;fill-opacity:1;stroke:url(#linearGradient16224);stroke-width:1.9086;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="circle26972"
+         cx="84.005455"
+         cy="-7.0594974"
+         r="26.720318" />
+      <circle
+         style="fill:none;fill-opacity:1;stroke:url(#radialGradient1759);stroke-width:5.72578;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path1751"
+         cx="84.005455"
+         cy="-7.0594974"
+         r="15.268755" />
+    </g>
+  </g>
+</svg>

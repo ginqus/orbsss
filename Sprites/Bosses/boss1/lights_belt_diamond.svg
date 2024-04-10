@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="138.28227"
+   height="138.28229"
+   viewBox="0 0 36.587183 36.587188"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient63">
+      <stop
+         style="stop-color:#492c4d;stop-opacity:1;"
+         offset="0"
+         id="stop61" />
+      <stop
+         style="stop-color:#372c4d;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop62" />
+      <stop
+         style="stop-color:#20294d;stop-opacity:1;"
+         offset="1"
+         id="stop63" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914-1">
+      <stop
+         style="stop-color:#c926ff;stop-opacity:1;"
+         offset="0"
+         id="stop3910" />
+      <stop
+         style="stop-color:#6f26ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop31621" />
+      <stop
+         style="stop-color:#2653ff;stop-opacity:1;"
+         offset="1"
+         id="stop3912" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3914">
+      <stop
+         style="stop-color:#f494ff;stop-opacity:1;"
+         offset="0"
+         id="stop975" />
+      <stop
+         style="stop-color:#b894ff;stop-opacity:1;"
+         offset="0.48251748"
+         id="stop977" />
+      <stop
+         style="stop-color:#6b8aff;stop-opacity:1;"
+         offset="1"
+         id="stop979" />
+    </linearGradient>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter919-6"
+       x="-0.50662162"
+       y="-0.50662159"
+       width="2.0132432"
+       height="2.0132432">
+      <feGaussianBlur
+         stdDeviation="2.2716572"
+         id="feGaussianBlur921-9" />
+    </filter>
+    <linearGradient
+       xlink:href="#linearGradient950"
+       id="linearGradient46"
+       gradientUnits="userSpaceOnUse"
+       x1="99.052994"
+       y1="-41.955891"
+       x2="114.02008"
+       y2="-41.955891" />
+    <linearGradient
+       id="linearGradient950">
+      <stop
+         style="stop-color:#d9f0ff;stop-opacity:1;"
+         offset="0"
+         id="stop946" />
+      <stop
+         style="stop-color:#bfeaff;stop-opacity:1;"
+         offset="1"
+         id="stop948" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-21.81531,-15.573065)">
+    <g
+       id="Diamond_Thing-Lights"
+       style="display:inline"
+       transform="translate(-64.891098,-11.798755)">
+      <rect
+         style="display:inline;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#40beff;stroke-width:2.11666;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;filter:url(#filter919-6)"
+         id="rect33831-6"
+         width="12.850433"
+         height="12.850434"
+         x="100.11132"
+         y="-48.381107"
+         transform="rotate(45)" />
+      <rect
+         style="display:inline;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient46);stroke-width:2.11666;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect362-1"
+         width="12.850433"
+         height="12.850434"
+         x="100.11132"
+         y="-48.381107"
+         transform="rotate(45)" />
+    </g>
+  </g>
+</svg>

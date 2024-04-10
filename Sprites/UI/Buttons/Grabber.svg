@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16.933332mm"
+   height="16.933332mm"
+   viewBox="0 0 16.933332 16.933332"
+   version="1.1"
+   id="svg19739"
+   sodipodi:docname="Grabber.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview19741"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="17.942835"
+     inkscape:cy="21.213203"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="rect481" />
+  <defs
+     id="defs19736" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="rect481"
+       style="stroke:#b8b8ff;stroke-opacity:1">
+      <circle
+         style="fill:#434759;fill-opacity:1;stroke:none;stroke-width:2.64583;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path21258"
+         cx="8.4666662"
+         cy="8.4666662"
+         r="8.4666662" />
+      <circle
+         style="fill:#1b1c24;fill-opacity:1;stroke:none;stroke-width:1.98437;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="circle21260"
+         cx="8.3263493"
+         cy="8.4666662"
+         r="6.3499999" />
+    </g>
+  </g>
+</svg>
