@@ -49,7 +49,8 @@ func _check_load_progress():
 
 
 func _on_language_pressed():
-	_language_close() if is_language_opened else _language_open()
+	if is_language_opened: _language_close()
+	else: _language_open()
 	is_language_opened = !is_language_opened
 
 func _language_open():

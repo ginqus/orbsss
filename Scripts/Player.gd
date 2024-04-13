@@ -260,6 +260,7 @@ func die():
 	death_effect.initial_velocity_max = max(velocity.length(), 1000) * 0.75
 	death_effect.color = Color(0, 0.5, 1, 1)
 	mouseEnabled = false
+	Input.vibrate_handheld(250)
 	queue_free()
 
 

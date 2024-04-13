@@ -5,7 +5,7 @@ extends Button
 # https://github.com/face-hh/griddycode
 
 
-const VERSION: String = "v0.1.0"
+var VERSION: String = ProjectSettings.get_setting("application/config/version")
 var is_requesting: bool = false
 var update_available: bool = false
 @onready var http: HTTPRequest = $HTTPRequest
