@@ -11,3 +11,7 @@ KEY_BLUR,Blur in pause,Размытие в паузе
 KEY_SENSITIVITY,Sensitivity,Чувствительность
 KEY_SAVED,Saved!,Сохранено!
 KEY_BEST_SCORE,BEST SCORE,РЕКОРД
+KEY_LOADING, Loading... , Загрузка... 
+KEY_UP_TO_DATE, Up to date , Обновлений нет 
+KEY_UPDATE_AVAILABLE, Update available! , Доступно обновление! 
+KEY_CHECK_UPDATES, Check for updates , Проверить обновления 

@@ -112,3 +112,7 @@ func _on_viewcfg_pressed():
 	print("ShowFPS: ", config.get_value("Settings", "ShowFPS"))
 	print("ShowVignette: ", config.get_value("Settings", "ShowVignette"))
 #endregion
+
+
+func _on_github_pressed() -> void:
+	OS.shell_open('https://github.com/I-like-Portal-2/orbsss')

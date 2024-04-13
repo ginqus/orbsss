@@ -17,7 +17,7 @@ func _on_pressed() -> void:
 	http.request("https://api.github.com/repos/I-like-Portal-2/orbsss/releases/latest")
 	is_requesting = true
 
-	if not update_available: text = " Loading... "
+	if not update_available: text = "KEY_LOADING"
 
 
 func _on_request_completed(_result, _response_code, _headers, body):
@@ -26,13 +26,13 @@ func _on_request_completed(_result, _response_code, _headers, body):
 	if update_available:
 		OS.shell_open(json["html_url"])
 	elif !is_higher_version(json["name"]):
-		text = " Up to date "
+		text = "KEY_UP_TO_DATE"
 	else:
 		add_theme_color_override("font_color", Color("#66FF99"))
 		add_theme_color_override("font_focus_color", Color("#66FF99"))
 		add_theme_color_override("font_hover_color", Color("#66FF99"))
 		add_theme_color_override("font_hover_pressed_color", Color("#66FF99"))
-		text = " Update available! "
+		text = "KEY_UPDATE_AVAILABLE"
 		update_available = true
 
 	is_requesting = false

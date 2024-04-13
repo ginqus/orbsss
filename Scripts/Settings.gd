@@ -15,6 +15,10 @@ func _ready():
 	blur_toggle.button_pressed = config.get_value("Settings", "ShowBlur", true)
 	sensitivity.value = config.get_value("Settings", "Sensitivity", 11.0)
 
+	if blur_toggle.button_pressed: blur_texture.show()
+	else: blur_texture.hide()
+	Save()
+
 func Save():
 	config.load(config_location)
 	config.set_value("Settings", "ShowFPS", fps_toggle.button_pressed)
