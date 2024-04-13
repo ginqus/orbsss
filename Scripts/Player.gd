@@ -50,6 +50,7 @@ var coins_this_round: int = 0
 var coins_pre_round: int = 0
 var coins_total: int = 0
 var delta_factor: float = 1
+var boss_spawned: bool = false
 
 @onready var cam := %Camera
 @onready var score_label := $"../UI/Current score"
@@ -144,6 +145,7 @@ func _physics_process(delta):
 
 	# Если синий орб
 		if collision.get_collider().is_in_group("blue_orb"):
+			Input.vibrate_handheld(35)
 			cam.shake(5, 5, 4)
 			velocity.y = -0.75 * Vector2(abs(velocity.x * 0.8), abs(velocity.y * 0.8 - 300)).length()
 			velocity.x /= 5
@@ -159,6 +161,7 @@ func _physics_process(delta):
 
 	# Если фиолетовый орб
 		if collision.get_collider().is_in_group("purple_orb"):
+			Input.vibrate_handheld(35)
 			cam.shake(5, 5, 4)
 			velocity.x = cos(collision.get_collider().rotation - PI/2) * 1000
 			velocity.y = sin(collision.get_collider().rotation - PI/2) * 1000
@@ -171,6 +174,7 @@ func _physics_process(delta):
 
 	# Если желтый орб
 		if collision.get_collider().is_in_group("yellow_orb"):
+			Input.vibrate_handheld(35)
 			cam.shake(5, 5, 4)
 			velocity.y = -0.75 * Vector2(abs(velocity.x * 0.8), abs(velocity.y * 0.8 - 300)).length()
 			velocity.x /= 5
@@ -260,15 +264,17 @@ func die():
 	death_effect.initial_velocity_max = max(velocity.length(), 1000) * 0.75
 	death_effect.color = Color(0, 0.5, 1, 1)
 	mouseEnabled = false
-	Input.vibrate_handheld(250)
+	Input.vibrate_handheld(100)
 	queue_free()
 
 
 func _slow_process():
-	await get_tree().create_timer(3, false, false, true).timeout
+	await get_tree().create_timer(2, false, false, true).timeout
 
 	# Отсылка на Субнатику и The Stanley Parable 🗣🗣🔥🔥🔥🥵🥵
-	if score > ("4546B".hex_to_int() / float(427)) and coins_this_round > 15:
+	#if score > ("4546B".hex_to_int() / float(427)) and coins_this_round > 15:
+	if score >= 600 and coins_this_round >= 20 and not boss_spawned:
+		boss_spawned = true
 		Spawn_boss()
 
 	_slow_process()

@@ -37,6 +37,7 @@ func Parry():
 	var direction = Vector2(2000, 0).rotated(rotation)
 
 	cam.shake(5, 12, 4)
+	Input.vibrate_handheld(60)
 	await get_tree().create_timer(0.25, false, false, true).timeout
 
 	hitstop_flash.hide()
