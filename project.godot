@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ballin"
-config/version="0.1.0"
+config/version="0.1.1"
 run/main_scene="res://Scenes/Levels/menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/bg_color=Color(0.0616, 0.0708, 0.08, 1)

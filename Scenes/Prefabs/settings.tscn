@@ -40,6 +40,17 @@ theme_override_font_sizes/font_size = 65
 toggle_mode = true
 text = "KEY_BLUR"
 
+[node name="Vibration toggle" type="Button" parent="."]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_pb2un")
+theme_override_font_sizes/font_size = 65
+toggle_mode = true
+text = "KEY_VIBRATION"
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
 theme = ExtResource("3_pisyp")
@@ -58,4 +69,5 @@ rounded = true
 
 [connection signal="pressed" from="FPSToggle" to="." method="_on_fps_toggle_pressed"]
 [connection signal="pressed" from="BlurToggle" to="." method="_on_blur_toggle_pressed"]
+[connection signal="pressed" from="Vibration toggle" to="." method="_on_vibration_toggle_pressed"]
 [connection signal="drag_ended" from="Sensitivity slider" to="." method="_on_sensitivity_slider_drag_ended"]

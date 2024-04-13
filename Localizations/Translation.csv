@@ -13,5 +13,7 @@ KEY_SAVED,Saved!,Сохранено!
 KEY_BEST_SCORE,BEST SCORE,РЕКОРД
 KEY_LOADING, Loading... , Загрузка... 
 KEY_UP_TO_DATE, Up to date , Обновлений нет 
-KEY_UPDATE_AVAILABLE, Update available! , Доступно обновление! 
-KEY_CHECK_UPDATES, Check for updates , Проверить обновления 
+KEY_UPDATE_AVAILABLE, Update available! , Есть обновление! 
+KEY_CHECK_UPDATES, Check for updates , Проверка обновлений 
+KEY_STILL_NO, Still none... , Все еще нет... 
+KEY_VIBRATION,Vibration,Вибрация

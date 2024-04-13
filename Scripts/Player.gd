@@ -51,6 +51,7 @@ var coins_pre_round: int = 0
 var coins_total: int = 0
 var delta_factor: float = 1
 var boss_spawned: bool = false
+var haptics_enabled: bool
 
 @onready var cam := %Camera
 @onready var score_label := $"../UI/Current score"
@@ -63,6 +64,7 @@ func _ready():
 
 	config.load(CONFIG_LOCATION)
 	sensitivity = config.get_value("Settings", "Sensitivity", 11.0)
+	haptics_enabled = config.get_value("Settings", "Vibration", true)
 
 	if get_window().size.x == 864:
 		get_window().size.x = 550
@@ -145,7 +147,7 @@ func _physics_process(delta):
 
 	# Если синий орб
 		if collision.get_collider().is_in_group("blue_orb"):
-			Input.vibrate_handheld(35)
+			if haptics_enabled: Input.vibrate_handheld(35)
 			cam.shake(5, 5, 4)
 			velocity.y = -0.75 * Vector2(abs(velocity.x * 0.8), abs(velocity.y * 0.8 - 300)).length()
 			velocity.x /= 5
@@ -161,7 +163,7 @@ func _physics_process(delta):
 
 	# Если фиолетовый орб
 		if collision.get_collider().is_in_group("purple_orb"):
-			Input.vibrate_handheld(35)
+			if haptics_enabled: Input.vibrate_handheld(35)
 			cam.shake(5, 5, 4)
 			velocity.x = cos(collision.get_collider().rotation - PI/2) * 1000
 			velocity.y = sin(collision.get_collider().rotation - PI/2) * 1000
@@ -174,7 +176,7 @@ func _physics_process(delta):
 
 	# Если желтый орб
 		if collision.get_collider().is_in_group("yellow_orb"):
-			Input.vibrate_handheld(35)
+			if haptics_enabled: Input.vibrate_handheld(35)
 			cam.shake(5, 5, 4)
 			velocity.y = -0.75 * Vector2(abs(velocity.x * 0.8), abs(velocity.y * 0.8 - 300)).length()
 			velocity.x /= 5
@@ -264,7 +266,7 @@ func die():
 	death_effect.initial_velocity_max = max(velocity.length(), 1000) * 0.75
 	death_effect.color = Color(0, 0.5, 1, 1)
 	mouseEnabled = false
-	Input.vibrate_handheld(100)
+	if haptics_enabled: Input.vibrate_handheld(100)
 	queue_free()
 
 

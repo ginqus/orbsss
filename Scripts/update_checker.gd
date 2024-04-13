@@ -8,6 +8,7 @@ extends Button
 var VERSION: String = ProjectSettings.get_setting("application/config/version")
 var is_requesting: bool = false
 var update_available: bool = false
+var up_to_date: bool = false
 @onready var http: HTTPRequest = $HTTPRequest
 
 
@@ -26,7 +27,10 @@ func _on_request_completed(_result, _response_code, _headers, body):
 	if update_available:
 		OS.shell_open(json["html_url"])
 	elif !is_higher_version(json["name"]):
-		text = "KEY_UP_TO_DATE"
+		if up_to_date: text = "KEY_STILL_NO"
+		else:
+			text = "KEY_UP_TO_DATE"
+			up_to_date = true
 	else:
 		add_theme_color_override("font_color", Color("#66FF99"))
 		add_theme_color_override("font_focus_color", Color("#66FF99"))
