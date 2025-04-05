@@ -1,0 +1,418 @@
+[gd_scene load_steps=24 format=3 uid="uid://b43i36t4xo0jn"]
+
+[ext_resource type="Script" uid="uid://dut8i2y5my5i6" path="res://Scripts/upgrades.gd" id="1_yymfc"]
+[ext_resource type="Texture2D" uid="uid://dpwynai0dduyr" path="res://Themes/frozen_dark/gui/coin.svg" id="2_3na5y"]
+[ext_resource type="Theme" uid="uid://d3x48jpexgh64" path="res://Themes/frozen_dark/themes/title_nobg.tres" id="3_6s42c"]
+[ext_resource type="Theme" uid="uid://05h73wxcxmxi" path="res://Themes/frozen_dark/themes/title.tres" id="3_yymfc"]
+[ext_resource type="Texture2D" uid="uid://byb61wp4eko8q" path="res://Themes/frozen_dark/gui/arrow_back.svg" id="4_3na5y"]
+[ext_resource type="FontFile" uid="uid://cn77g7nchvlyj" path="res://Fonts/NTSomic-Semibold.ttf" id="4_6s42c"]
+[ext_resource type="Script" uid="uid://b4nylonognjid" path="res://addons/SmoothScroll/SmoothScrollContainer.gd" id="4_a22qk"]
+[ext_resource type="Script" uid="uid://5ept7u3mbcte" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="5_7yd6m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b6do8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0r2hu"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhfsf"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgdl7"]
+bg_color = Color(0, 0, 0, 0.498039)
+
+[sub_resource type="Theme" id="Theme_g5txc"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("4_6s42c")
+Button/styles/focus = SubResource("StyleBoxEmpty_b6do8")
+Button/styles/hover = SubResource("StyleBoxFlat_0r2hu")
+Button/styles/normal = SubResource("StyleBoxFlat_0r2hu")
+Button/styles/pressed = SubResource("StyleBoxFlat_nhfsf")
+Label/fonts/font = ExtResource("4_6s42c")
+Panel/styles/panel = SubResource("StyleBoxFlat_bgdl7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yd6m"]
+bg_color = Color(0.584314, 0.584314, 0.584314, 1)
+border_width_left = 6
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3na5y"]
+bg_color = Color(0.584314, 0.584314, 0.584314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6s42c"]
+bg_color = Color(0.470588, 0.470588, 0.470588, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5egh"]
+content_margin_right = 10.0
+bg_color = Color(0.09, 0.09, 0.09, 0)
+
+[sub_resource type="Theme" id="Theme_sh3ik"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_7yd6m")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_3na5y")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_6s42c")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_t5egh")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_t5egh")
+
+[sub_resource type="Resource" id="Resource_3na5y"]
+script = ExtResource("5_7yd6m")
+friction = 4.0
+minimum_velocity = 0.4
+rebound_strength = 7.0
+
+[sub_resource type="Resource" id="Resource_6s42c"]
+script = ExtResource("5_7yd6m")
+friction = 4.0
+minimum_velocity = 0.4
+rebound_strength = 7.0
+
+[sub_resource type="Animation" id="Animation_yymfc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [24]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Blur:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label/Back:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:anchor_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:anchor_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SmoothScrollContainer:anchor_bottom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Coin:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 144)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Coin:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8hk4u"]
+resource_name = "open"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 24]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Blur:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label/Back:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:anchor_left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [0.5, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:anchor_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [0.5, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SmoothScrollContainer:anchor_bottom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.05, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [0.25, 1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Coin:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(608, 144), Vector2(432, 144)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Coin:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u8ire"]
+_data = {
+&"RESET": SubResource("Animation_yymfc"),
+&"open": SubResource("Animation_8hk4u")
+}
+
+[node name="Upgrades" type="CanvasLayer"]
+script = ExtResource("1_yymfc")
+
+[node name="Blur" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Coin" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 96.0
+offset_top = 144.0
+offset_right = 160.0
+offset_bottom = 208.0
+grow_horizontal = 0
+texture = ExtResource("2_3na5y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CoinLabel" type="Label" parent="Coin"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -22.0
+offset_right = -12.0
+offset_bottom = 30.0
+theme = ExtResource("3_6s42c")
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 8.0
+offset_top = 48.0
+offset_right = -8.0
+offset_bottom = 128.0
+grow_horizontal = 2
+theme = ExtResource("3_yymfc")
+text = "KEY_UPGRADES"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Back" type="Button" parent="Label"]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 1
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 80.0
+offset_bottom = 120.0
+mouse_filter = 1
+theme = SubResource("Theme_g5txc")
+icon = ExtResource("4_3na5y")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SmoothScrollContainer" type="ScrollContainer" parent="."]
+editor_description = "set size.x 490.0 if you want to accommodate for the scrollbar"
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.25
+offset_left = 16.0
+offset_top = 224.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_sh3ik")
+script = ExtResource("4_a22qk")
+wheel_scroll_damper = SubResource("Resource_3na5y")
+dragging_scroll_damper = SubResource("Resource_6s42c")
+hide_scrollbar_over_time = true
+scrollbar_hide_time = 0.5
+scrollbar_fade_in_time = 0.1
+scrollbar_fade_out_time = 0.3
+metadata/_custom_type_script = "uid://b4nylonognjid"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SmoothScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+&"": SubResource("AnimationLibrary_u8ire")
+}
+
+[connection signal="pressed" from="Label/Back" to="." method="_on_back_pressed"]

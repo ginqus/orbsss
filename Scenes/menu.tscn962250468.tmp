@@ -1,0 +1,335 @@
+[gd_scene load_steps=24 format=3 uid="uid://dok4b2xi2ox2n"]
+
+[ext_resource type="Script" uid="uid://dj4rkd6ebjyey" path="res://Scripts/main_menu.gd" id="1_1mj3e"]
+[ext_resource type="Texture2D" uid="uid://1ph63pqhoucf" path="res://Themes/frozen_dark/gui/main_menu_background.svg" id="2_w1fum"]
+[ext_resource type="Theme" uid="uid://db2s4j5s8cswq" path="res://Themes/frozen_dark/themes/ui_button_icon.tres" id="3_tcxnj"]
+[ext_resource type="Texture2D" uid="uid://b0cvvjelmpjm2" path="res://Themes/frozen_dark/gui/globe.svg" id="4_ncg6a"]
+[ext_resource type="Theme" uid="uid://bgcbi5sd70bfd" path="res://Themes/frozen_dark/themes/ui_button_main.tres" id="5_yrplk"]
+[ext_resource type="Texture2D" uid="uid://cwofhv5cpo5d6" path="res://Themes/frozen_dark/gui/english.png" id="6_2htla"]
+[ext_resource type="Texture2D" uid="uid://cttrq3c826kq6" path="res://Themes/frozen_dark/gui/russian.png" id="7_t76yl"]
+[ext_resource type="Texture2D" uid="uid://dkxx0kab7riv6" path="res://Themes/frozen_dark/gui/play.svg" id="8_74odb"]
+[ext_resource type="Texture2D" uid="uid://oia8bhw6j44c" path="res://Themes/frozen_dark/gui/cog.svg" id="8_pty2f"]
+[ext_resource type="Texture2D" uid="uid://b4510wijsrafe" path="res://Themes/frozen_dark/gui/palette.svg" id="10_kd5vr"]
+[ext_resource type="Texture2D" uid="uid://dkmh03hxikwd2" path="res://Themes/frozen_dark/gui/upgrades.svg" id="11_5ti5v"]
+[ext_resource type="Texture2D" uid="uid://3ekrb3dgivj0" path="res://Themes/frozen_dark/gui/exit.svg" id="11_v0y1b"]
+[ext_resource type="Texture2D" uid="uid://bog050vvd0axh" path="res://Themes/frozen_dark/gui/github_logo.svg" id="14_2inwf"]
+[ext_resource type="Texture2D" uid="uid://dg73bqlp3k21i" path="res://Themes/frozen_dark/gui/update_arrows.svg" id="15_k0fb5"]
+[ext_resource type="Script" uid="uid://dby6ildxautbl" path="res://Scripts/update_checker.gd" id="15_wl3c7"]
+[ext_resource type="Texture2D" uid="uid://s5tdha243yh3" path="res://Themes/frozen_dark/gui/checkmark.svg" id="16_1by5w"]
+[ext_resource type="FontVariation" uid="uid://dgirmos8j28po" path="res://Fonts/new_font_variation.tres" id="16_kmwmt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1sfhn"]
+content_margin_left = 12.0
+content_margin_right = 12.0
+bg_color = Color(1, 0.5, 0.541667, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Animation" id="Animation_ydtkm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_tmtg7"]
+resource_name = "loading"
+length = 10.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 10),
+"transitions": PackedFloat32Array(2, 1, 1),
+"update": 0,
+"values": [0.0, -0.523599, -62.8319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2om1q"]
+_data = {
+&"RESET": SubResource("Animation_ydtkm"),
+&"loading": SubResource("Animation_tmtg7")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ti5v"]
+content_margin_left = 64.0
+content_margin_right = 24.0
+bg_color = Color(0.15, 0.163333, 0.2, 0.960784)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_1by5w"]
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("16_kmwmt")
+Label/styles/normal = SubResource("StyleBoxFlat_5ti5v")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1mj3e")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_w1fum")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Language" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 96.0
+grow_horizontal = 0
+theme = ExtResource("3_tcxnj")
+theme_override_font_sizes/font_size = 32
+icon = ExtResource("4_ncg6a")
+clip_text = true
+icon_alignment = 1
+
+[node name="English" type="Button" parent="Language"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 80.0
+offset_right = 336.0
+offset_bottom = 136.0
+theme = ExtResource("5_yrplk")
+theme_override_colors/icon_pressed_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_constants/icon_max_width = 52
+theme_override_font_sizes/font_size = 32
+text = "english"
+icon = ExtResource("6_2htla")
+icon_alignment = 2
+expand_icon = true
+
+[node name="Russian" type="Button" parent="Language"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 36.0
+offset_top = 136.0
+offset_right = 256.0
+offset_bottom = 192.0
+grow_horizontal = 0
+theme = ExtResource("5_yrplk")
+theme_override_colors/icon_pressed_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_constants/icon_max_width = 52
+theme_override_font_sizes/font_size = 32
+text = "русский"
+icon = ExtResource("7_t76yl")
+icon_alignment = 2
+expand_icon = true
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -512.0
+offset_right = 52.0
+offset_bottom = -432.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_yrplk")
+theme_override_font_sizes/font_size = 64
+text = "KEY_PLAY"
+icon = ExtResource("8_74odb")
+
+[node name="ProgressBar" type="ProgressBar" parent="Play"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = -16.0
+offset_right = 192.0
+offset_bottom = -8.0
+grow_horizontal = 2
+theme = ExtResource("5_yrplk")
+max_value = 1.0
+show_percentage = false
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -432.0
+offset_right = 52.0
+offset_bottom = -352.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_yrplk")
+theme_override_font_sizes/font_size = 64
+text = "KEY_SETTINGS"
+icon = ExtResource("8_pty2f")
+
+[node name="Shop" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -352.0
+offset_right = 52.0
+offset_bottom = -272.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_yrplk")
+theme_override_font_sizes/font_size = 64
+text = "KEY_THEMES"
+icon = ExtResource("10_kd5vr")
+
+[node name="Upgrades" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -272.0
+offset_right = 46.0
+offset_bottom = -192.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_yrplk")
+theme_override_font_sizes/font_size = 64
+text = "KEY_UPGRADES"
+icon = ExtResource("11_5ti5v")
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -192.0
+offset_right = 46.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_yrplk")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1sfhn")
+text = "KEY_EXIT"
+icon = ExtResource("11_v0y1b")
+
+[node name="GitHub" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = -16.0
+grow_vertical = 0
+theme = ExtResource("3_tcxnj")
+icon = ExtResource("14_2inwf")
+expand_icon = true
+
+[node name="UpdateChecker" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -96.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(40, 40)
+theme = ExtResource("3_tcxnj")
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("15_k0fb5")
+alignment = 2
+icon_alignment = 2
+script = ExtResource("15_wl3c7")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="UpdateChecker"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UpdateChecker"]
+libraries = {
+&"": SubResource("AnimationLibrary_2om1q")
+}
+
+[node name="Toast" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 133.0
+offset_top = -112.0
+offset_right = -132.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_1by5w")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Toast"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource("16_1by5w")
+
+[connection signal="pressed" from="Language" to="." method="_on_language_pressed"]
+[connection signal="pressed" from="Language/English" to="." method="_on_english_pressed"]
+[connection signal="pressed" from="Language/Russian" to="." method="_on_russian_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="Upgrades" to="." method="_on_upgrades_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="GitHub" to="." method="_on_github_pressed"]
+[connection signal="pressed" from="UpdateChecker" to="UpdateChecker" method="_on_pressed"]
+[connection signal="request_completed" from="UpdateChecker/HTTPRequest" to="UpdateChecker" method="_on_http_request_request_completed"]
+[connection signal="animation_finished" from="UpdateChecker/AnimationPlayer" to="UpdateChecker" method="_on_animation_player_animation_finished"]

@@ -1,0 +1,34 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://dfx1bkom415q"]
+
+[ext_resource type="Texture2D" uid="uid://devdojy8jscfx" path="res://Themes/frozen_dark/gui/preview_overlay.svg" id="1_vsm7q"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_pint7"]
+expanded_output_ports = [0]
+texture = ExtResource("1_vsm7q")
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform sampler2D tex_frg_2;
+
+
+
+void fragment() {
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, UV);
+	float n_out2p4 = n_out2p0.a;
+
+
+// Output:0
+	COLOR.a = n_out2p4;
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(760, 100)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_pint7")
+nodes/fragment/2/position = Vector2(200, 120)
+nodes/fragment/connections = PackedInt32Array(2, 4, 0, 1)

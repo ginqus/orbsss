@@ -10,41 +10,35 @@ config_version=5
 
 [application]
 
-config/name="ballin"
-config/version="0.1.1"
-run/main_scene="res://Scenes/Levels/menu.tscn"
-config/features=PackedStringArray("4.3", "Mobile")
-boot_splash/bg_color=Color(0.0616, 0.0708, 0.08, 1)
+config/name="orbsss"
+config/version="1.0.0"
+run/main_scene="res://Scenes/menu.tscn"
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalVariables="*res://Scripts/global_variables.gd"
+SaveSystem="*res://addons/save_system/save_system.gd"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=1
 
 [display]
 
-window/size/viewport_width=864
-window/size/viewport_height=1728
+window/size/viewport_width=512
+window/size/viewport_height=960
+window/size/window_width_override=400
+window/size/window_height_override=800
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
 
-[dotnet]
-
-project/assembly_name="ballin"
-
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
-
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/project_time_tracker/plugin.cfg", "res://addons/trail_2d/plugin.cfg")
-
-[global_group]
-
-orb=""
-
-[gui]
-
-theme/default_font_generate_mipmaps=true
+enabled=PackedStringArray("res://addons/SmoothScroll/plugin.cfg", "res://addons/indent_guidelines/plugin.cfg", "res://addons/nine_patch_sprite_2d/plugin.cfg", "res://addons/save_system/plugin.cfg", "res://addons/trail_2d/plugin.cfg")
 
 [input]
 
@@ -58,17 +52,26 @@ right_click={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+back_click={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":8,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Localizations/Translation.en.translation", "res://Localizations/Translation.ru.translation")
+locale/translations=PackedStringArray("res://Translations/translations.en.translation", "res://Translations/translations.ru.translation")
+
+[physics]
+
+2d/physics_engine="Rapier2D"
+2d/default_gravity=1960.0
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
-environment/defaults/default_clear_color=Color(0.08, 0.0843333, 0.1, 1)
 
 [svgsprite]
 

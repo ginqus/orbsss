@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://df1yq7cgyl3ju"]
+
+[ext_resource type="Script" uid="uid://064r3nrx77sp" path="res://Scripts/red_line.gd" id="1_264kt"]
+[ext_resource type="Texture2D" uid="uid://vjynfnjkje2u" path="res://Themes/frozen_dark/sprites/red_line.svg" id="2_jw6d1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_264kt"]
+radius = 24.0
+height = 432.0
+
+[node name="RedLine" type="StaticBody2D" groups=["hazard"]]
+script = ExtResource("1_264kt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.333333, 0.333333)
+texture = ExtResource("2_jw6d1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_264kt")

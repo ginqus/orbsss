@@ -1,0 +1,38 @@
+key,en,ru
+KEY_PLAY, play, играть
+KEY_RESTART, restart, перезапуск
+KEY_SETTINGS, settings, настройки
+KEY_EXIT, exit, выйти
+KEY_LANG,language,язык
+KEY_CONFIRM_EXIT,quit the game?,выйти из игры?
+KEY_CONFIRM_MENU,return to menu?,выйти в меню?
+KEY_CONFIRM_RESTART,restart?,перезапустить?
+KEY_NO,no,нет
+KEY_YES,yes,да
+KEY_CHECK_UPDATES,check for updates,проверить обновления
+KEY_LOADING,loading...,загрузка...
+KEY_UPDATE_AVAILABLE,update available!,доступно обновление!
+KEY_UP_TO_DATE, you're already up date, у тебя уже последняя версия
+KEY_TOO_MANY_REQUESTS,too many requests!,слишком много запросов!
+KEY_ERROR,error!,ошибка!
+KEY_DOWNLOAD,download,скачать
+KEY_CLOSE,close,закрыть
+KEY_DONT_SHOW,don't show again,не показывать
+KEY_UPDATE_ON_STARTUP,check for updates on startup,проверять обновления при запуске
+KEY_THEMES, themes, темы
+KEY_UPGRADES, upgrades, апгрейды
+KEY_RESUME, resume, продолжить
+KEY_MAIN_MENU, main menu, в меню
+KEY_PAUSE, pause, пауза
+KEY_SPEED,speed,скорость
+KEY_SPEED_DESC,launch the ball harder!,запускай шар с большей силой!
+KEY_TRAJECTORY,trajectory,траектория
+KEY_TRAJECTORY_DESC,makes the trajectory longer,делает траекторию длиннее
+KEY_STAMINA,stamina,стамина
+KEY_STAMINA_DESC,increases maximum stamina,увеличивает максимальный запас стамины
+KEY_INVINC_TIME,i-frames,i-фреймы
+KEY_INVINC_TIME_DESC,you'll be invincibile for longer after taking damage,увеличивает время неуязвимости после получения урона
+KEY_BEST_SCORE,best score,рекорд
+KEY_SLOWMODE,slowmo,слоумо
+KEY_SLOWMODE_DESC,the time slows down more when aiming,время замедляется сильнее во время прицеливания
+KEY_CONFIRM_UPGRADE,buy upgrade?,купить апгрейд?

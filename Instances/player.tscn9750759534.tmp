@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bchj2ybit6amx"]
+
+[ext_resource type="Texture2D" uid="uid://ccirbq8bulyp2" path="res://Skins/frozen_dark/sprites/player.svg" id="1_06r5t"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_wd044"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnn0m"]
+radius = 32.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_wd044")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lnn0m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("1_06r5t")
+
+[node name="Trail" type="Line2D" parent="."]
+top_level = true
+z_index = -1
+width = 2.0
+default_color = Color(0, 0, 1, 1)
+sharp_limit = 0.0
+antialiased = true
+
+[node name="Trajectory" type="Line2D" parent="."]
+top_level = true
+z_index = -1
+width = 2.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]

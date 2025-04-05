@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://oxm06r4tfk7e"]
+
+[ext_resource type="Script" uid="uid://c4difcqc20id3" path="res://Scripts/yellow_orb.gd" id="1_r3d6i"]
+[ext_resource type="Texture2D" uid="uid://fpiwopi58jex" path="res://Themes/frozen_dark/sprites/yellow_orb.svg" id="2_0wlku"]
+[ext_resource type="Texture2D" uid="uid://d16jbbukxdvbu" path="res://Themes/frozen_dark/sprites/orb_shadow.svg" id="2_r3d6i"]
+[ext_resource type="Texture2D" uid="uid://txltwky3nquo" path="res://addons/kenney_particle_pack/star_04.png" id="3_3bmos"]
+[ext_resource type="Texture2D" uid="uid://dvf6qv6q08j36" path="res://addons/kenney_particle_pack/light_02.png" id="3_yg6lm"]
+[ext_resource type="Texture2D" uid="uid://bpmegoshgdh7t" path="res://Themes/frozen_dark/sprites/orb_particle_mask.svg" id="4_cdpxe"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n5lrx"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_38qpk"]
+offsets = PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.833333, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 0.8, 0.8, 0.8, 1, 1, 1, 1, 1, 0.8, 0.8, 0.8, 1, 0, 0, 0, 0)
+metadata/_snap_enabled = true
+metadata/_snap_count = 6
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r3d6i"]
+blend_mode = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cpg4p"]
+radius = 36.0
+
+[node name="YellowOrb" type="StaticBody2D" groups=["orb"]]
+script = ExtResource("1_r3d6i")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+texture = ExtResource("2_r3d6i")
+
+[node name="GlowAuraMask" type="Sprite2D" parent="."]
+clip_children = 1
+texture = ExtResource("4_cdpxe")
+
+[node name="GlowAura" type="CPUParticles2D" parent="GlowAuraMask"]
+material = SubResource("CanvasItemMaterial_n5lrx")
+amount = 6
+texture = ExtResource("3_yg6lm")
+lifetime = 2.0
+emission_shape = 1
+emission_sphere_radius = 4.0
+spread = 180.0
+gravity = Vector2(0, 0)
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 0.21
+scale_amount_max = 0.22
+color = Color(2, 1.67451, 0.701961, 0.235294)
+color_ramp = SubResource("Gradient_38qpk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.333333, 0.333333)
+texture = ExtResource("2_0wlku")
+
+[node name="Twinkles" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_r3d6i")
+amount = 2
+texture = ExtResource("3_3bmos")
+lifetime = 2.0
+emission_shape = 2
+emission_sphere_radius = 48.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 4.0
+initial_velocity_max = 8.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+color = Color(2, 1.674, 0.7, 1)
+color_ramp = SubResource("Gradient_38qpk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cpg4p")

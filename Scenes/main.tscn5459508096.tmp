@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://8iq1elyqoyeu"]
+
+[ext_resource type="Script" uid="uid://1rsllflu00ie" path="res://Scripts/main.gd" id="1_8ydcj"]
+[ext_resource type="Script" uid="uid://cv3idilj6533u" path="res://Scripts/camera.gd" id="1_jj133"]
+[ext_resource type="PackedScene" uid="uid://bchj2ybit6amx" path="res://Instances/player.tscn" id="1_ra2jm"]
+[ext_resource type="Texture2D" uid="uid://5sa1wdktnchj" path="res://Themes/frozen_dark/gui/background.svg" id="2_82wve"]
+[ext_resource type="Texture2D" uid="uid://fb74nyljgddr" path="res://Themes/frozen_dark/gui/background_overlay.svg" id="5_6bp64"]
+[ext_resource type="Theme" uid="uid://db2s4j5s8cswq" path="res://Themes/frozen_dark/themes/ui_button_icon.tres" id="5_oh88o"]
+[ext_resource type="Texture2D" uid="uid://bnnmbnwbckpdq" path="res://Themes/frozen_dark/gui/pause_circle.svg" id="6_21xkr"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_8ydcj")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+z_index = -1
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(512, 512)
+repeat_times = 4
+ignore_camera_scroll = true
+
+[node name="Background" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(256, 256)
+scale = Vector2(-0.5, -0.5)
+texture = ExtResource("2_82wve")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(256, 480)
+offset = Vector2(0, -256)
+script = ExtResource("1_jj133")
+
+[node name="BackgroundOverlay" type="TextureRect" parent="Camera"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -480.0
+offset_right = 256.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("5_6bp64")
+expand_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("1_ra2jm")]
+position = Vector2(256, 496)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Pause" type="Button" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 96.0
+grow_horizontal = 0
+theme = ExtResource("5_oh88o")
+icon = ExtResource("6_21xkr")
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="UI/Pause" to="." method="_on_pause_button_down"]
+[connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]

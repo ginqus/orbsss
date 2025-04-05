@@ -1,0 +1,93 @@
+[gd_resource type="Theme" load_steps=18 format=3 uid="uid://bgcbi5sd70bfd"]
+
+[ext_resource type="FontVariation" uid="uid://dgirmos8j28po" path="res://Fonts/default_large.tres" id="1_d76o2"]
+[ext_resource type="FontFile" uid="uid://cn77g7nchvlyj" path="res://Fonts/NTSomic-Semibold.ttf" id="1_lvonb"]
+[ext_resource type="Texture2D" uid="uid://dm72drvct4g3y" path="res://Themes/frozen_dark/gui/checkbox_checked.svg" id="2_p1huf"]
+[ext_resource type="Texture2D" uid="uid://dryuu44of7347" path="res://Themes/frozen_dark/gui/checkbox_unchecked.svg" id="3_lxeb4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6eywf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05em2"]
+content_margin_left = 12.0
+content_margin_right = 12.0
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4a7ho"]
+content_margin_left = 12.0
+content_margin_right = 12.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v6raq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ni7t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf7f4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q0k5i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_10yir"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tca1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c04hy"]
+bg_color = Color(0, 0, 0, 0.588235)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_begn6"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_awep4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3n3hk"]
+bg_color = Color(0.68, 0.749333, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/constants/h_separation = 20
+Button/fonts/font = ExtResource("1_d76o2")
+Button/styles/focus = SubResource("StyleBoxEmpty_6eywf")
+Button/styles/hover = SubResource("StyleBoxFlat_05em2")
+Button/styles/normal = SubResource("StyleBoxFlat_05em2")
+Button/styles/pressed = SubResource("StyleBoxFlat_4a7ho")
+CheckBox/colors/font_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_pressed_color = Color(1, 1, 1, 1)
+CheckBox/constants/h_separation = 16
+CheckBox/icons/checked = ExtResource("2_p1huf")
+CheckBox/icons/unchecked = ExtResource("3_lxeb4")
+CheckBox/styles/disabled = SubResource("StyleBoxEmpty_v6raq")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_2ni7t")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_hf7f4")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_q0k5i")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_10yir")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_2tca1")
+Label/fonts/font = ExtResource("1_lvonb")
+Panel/styles/panel = SubResource("StyleBoxFlat_c04hy")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_begn6")
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_awep4")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_3n3hk")

@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr6ncwdn7q2x7"]
+
+[ext_resource type="Texture2D" uid="uid://dsv26hintr2s3" path="res://Themes/frozen_dark/preview.svg" id="1_4li2n"]
+[ext_resource type="Script" uid="uid://b1ilghm4iq2h8" path="res://Scripts/theme_preview.gd" id="1_albmb"]
+[ext_resource type="Shader" uid="uid://dfx1bkom415q" path="res://Shaders/round_corners.tres" id="2_p3pax"]
+[ext_resource type="Theme" uid="uid://d3x48jpexgh64" path="res://Themes/frozen_dark/themes/title_nobg.tres" id="3_6ccgp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3pax"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gdj3"]
+shader = ExtResource("2_p3pax")
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(256, 504)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -252.0
+offset_right = 128.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_albmb")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -236.0
+offset_right = 104.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3pax")
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+material = SubResource("ShaderMaterial_0gdj3")
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_4li2n")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(320, 80)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 192.0
+offset_right = 160.0
+offset_bottom = 272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_6ccgp")
+horizontal_alignment = 1
+vertical_alignment = 1

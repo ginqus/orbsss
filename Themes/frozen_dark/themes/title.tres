@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://05h73wxcxmxi"]
+
+[ext_resource type="FontVariation" uid="uid://ctjl15f170b46" path="res://Fonts/default_medium.tres" id="1_7yibw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a22qk"]
+bg_color = Color(0, 0, 0, 0.588235)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+Label/font_sizes/font_size = 42
+Label/fonts/font = ExtResource("1_7yibw")
+Label/styles/normal = SubResource("StyleBoxFlat_a22qk")

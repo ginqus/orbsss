@@ -1,0 +1,327 @@
+[gd_scene load_steps=18 format=3 uid="uid://d141ux2f2kvj6"]
+
+[ext_resource type="Script" uid="uid://cy3v40dgq5bkc" path="res://Scripts/settings.gd" id="1_0dytu"]
+[ext_resource type="Theme" uid="uid://bgcbi5sd70bfd" path="res://Themes/frozen_dark/themes/ui_button_main.tres" id="2_pein7"]
+[ext_resource type="FontFile" uid="uid://cn77g7nchvlyj" path="res://Fonts/NTSomic-Semibold.ttf" id="3_bic5h"]
+[ext_resource type="Theme" uid="uid://05h73wxcxmxi" path="res://Themes/frozen_dark/themes/title.tres" id="3_h1d1a"]
+[ext_resource type="Texture2D" uid="uid://byb61wp4eko8q" path="res://Themes/frozen_dark/gui/arrow_back.svg" id="4_f717q"]
+[ext_resource type="Script" uid="uid://b4nylonognjid" path="res://addons/SmoothScroll/SmoothScrollContainer.gd" id="5_6hsh4"]
+[ext_resource type="Script" uid="uid://5ept7u3mbcte" path="res://addons/SmoothScroll/scroll_damper/expo_scroll_damper.gd" id="6_mrddw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1d1a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a46r"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e7x6s"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qfi6"]
+bg_color = Color(0, 0, 0, 0.498039)
+
+[sub_resource type="Theme" id="Theme_vcc5w"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("3_bic5h")
+Button/styles/focus = SubResource("StyleBoxEmpty_h1d1a")
+Button/styles/hover = SubResource("StyleBoxFlat_5a46r")
+Button/styles/normal = SubResource("StyleBoxFlat_5a46r")
+Button/styles/pressed = SubResource("StyleBoxFlat_e7x6s")
+Label/fonts/font = ExtResource("3_bic5h")
+Panel/styles/panel = SubResource("StyleBoxFlat_8qfi6")
+
+[sub_resource type="Resource" id="Resource_60m7q"]
+script = ExtResource("6_mrddw")
+friction = 4.0
+minimum_velocity = 0.4
+rebound_strength = 7.0
+
+[sub_resource type="Resource" id="Resource_t8m5j"]
+script = ExtResource("6_mrddw")
+friction = 4.0
+minimum_velocity = 0.4
+rebound_strength = 7.0
+
+[sub_resource type="Animation" id="Animation_0ixcf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Settings/SmoothScrollContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Settings/SmoothScrollContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Settings/Blur:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Settings/Label/Back:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Settings/Label:visible_characters")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [24]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Settings/Label:anchor_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Settings/Label:anchor_right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_hpjyq"]
+resource_name = "open"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Settings/SmoothScrollContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(-480, 160), Vector2(32, 160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Settings/SmoothScrollContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Settings/Blur:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Settings/Label/Back:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Settings/Label:visible_characters")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 24]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Settings/Label:anchor_left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [0.5, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Settings/Label:anchor_right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [0.5, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gmjhx"]
+_data = {
+&"RESET": SubResource("Animation_0ixcf"),
+&"open": SubResource("Animation_hpjyq")
+}
+
+[node name="Settings" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_0dytu")
+
+[node name="Blur" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 8.0
+offset_top = 48.0
+offset_right = -8.0
+offset_bottom = 128.0
+grow_horizontal = 2
+theme = ExtResource("3_h1d1a")
+text = "KEY_SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Back" type="Button" parent="Label"]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 80.0
+offset_bottom = 120.0
+grow_vertical = 2
+mouse_filter = 1
+theme = SubResource("Theme_vcc5w")
+icon = ExtResource("4_f717q")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SmoothScrollContainer" type="ScrollContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = 160.0
+offset_right = -544.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_6hsh4")
+wheel_scroll_damper = SubResource("Resource_60m7q")
+dragging_scroll_damper = SubResource("Resource_t8m5j")
+drag_with_mouse = false
+drag_with_touch = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SmoothScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="UpdateOnStartup" type="CheckBox" parent="SmoothScrollContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("2_pein7")
+theme_override_font_sizes/font_size = 32
+text = "KEY_UPDATE_ON_STARTUP"
+autowrap_mode = 3
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_gmjhx")
+}
+
+[connection signal="pressed" from="Label/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="SmoothScrollContainer/VBoxContainer/UpdateOnStartup" to="." method="_on_update_on_startup_pressed"]

@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://d3x48jpexgh64"]
+
+[ext_resource type="FontVariation" uid="uid://cfqgdapfovl26" path="res://Fonts/default_small.tres" id="1_7q5ll"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q5ll"]
+bg_color = Color(0, 0, 0, 0)
+
+[resource]
+Label/font_sizes/font_size = 42
+Label/fonts/font = ExtResource("1_7q5ll")
+Label/styles/normal = SubResource("StyleBoxFlat_7q5ll")

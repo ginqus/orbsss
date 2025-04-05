@@ -1,55 +1,52 @@
-extends VBoxContainer
+extends CanvasLayer
 
 
-const config_location := "user://orbsss-settings.cfg"
-var config: ConfigFile = ConfigFile.new()
-@onready var fps_toggle: Button = $FPSToggle
-@onready var blur_toggle: Button = $BlurToggle
-@onready var blur_texture: TextureRect = $"../BlurTextureRect"
-@onready var sensitivity: HSlider = $"Sensitivity slider"
-@onready var vibration_toggle: Button = $"Vibration toggle"
-
-func _ready():
-	config.load(config_location)
-
-	fps_toggle.button_pressed = config.get_value("Settings", "ShowFPS", false)
-	blur_toggle.button_pressed = config.get_value("Settings", "ShowBlur", true)
-	vibration_toggle.button_pressed = config.get_value("Settings", "Vibration", true)
-	sensitivity.value = config.get_value("Settings", "Sensitivity", 11.0)
-
-	if blur_toggle.button_pressed: blur_texture.show()
-	else: blur_texture.hide()
-	Save()
-
-func Save():
-	config.load(config_location)
-	config.set_value("Settings", "ShowFPS", fps_toggle.button_pressed)
-	config.set_value("Settings", "ShowBlur", blur_toggle.button_pressed)
-	config.set_value("Settings", "Sensitivity", sensitivity.value)
-	config.set_value("Settings", "Vibration", vibration_toggle.button_pressed)
-	config.save(config_location)
+@onready var animation: AnimationPlayer = $AnimationPlayer
+@onready var update_on_startup: CheckBox = $SmoothScrollContainer/VBoxContainer/UpdateOnStartup
 
 
-func _on_fps_toggle_pressed():
-	if get_tree().current_scene.name == "MainLevel" and fps_toggle.button_pressed:
-		%FPS._show()
-	elif get_tree().current_scene.name == "MainLevel" and !fps_toggle.button_pressed:
-		%FPS._hide()
-	Save()
+func _ready() -> void:
+	await RenderingServer.frame_post_draw
 
-func _on_blur_toggle_pressed():
-	if blur_toggle.button_pressed: blur_texture.show()
-	else: blur_texture.hide()
-	Save()
+	GlobalVariables.popup_order.append(get_path())
 
-func _on_sensitivity_slider_drag_ended(value_changed):
-	if value_changed:
-		Save()
-		if get_tree().current_scene.name == "MainLevel":
-			%Player.sensitivity = sensitivity.value
+	var screenshot: Image = get_viewport().get_texture().get_image()
+	var blurred: Image = GlobalVariables.blur_image(screenshot)
+
+	$Blur.texture = ImageTexture.create_from_image(blurred)
+
+	animation.play("open")
+	_load_config()
 
 
-func _on_vibration_toggle_pressed() -> void:
-	Save()
-	if get_tree().current_scene.name == "MainLevel":
-		%Player.haptics_enabled = vibration_toggle.button_pressed
+func _load_config() -> void:
+	var config: ConfigFile = ConfigFile.new()
+	config.load(GlobalVariables.CONFIG_DIR)
+	update_on_startup.button_pressed = config.get_value("player", "show_update_on_startup", true)
+
+
+func _on_back_pressed() -> void:
+	_close()
+
+
+func _close() -> void:
+	GlobalVariables.popup_order.pop_back()
+	animation.current_animation = "open"
+	animation.speed_scale = 1.6
+	animation.seek(0.4)
+	animation.play_backwards("open")
+	await animation.animation_finished
+	queue_free()
+
+
+func _on_update_on_startup_pressed() -> void:
+	var config: ConfigFile = ConfigFile.new()
+	config.load(GlobalVariables.CONFIG_DIR)
+	config.set_value("player", "show_update_on_startup", update_on_startup.button_pressed)
+	config.save(GlobalVariables.CONFIG_DIR)
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		if GlobalVariables.popup_order.back() == get_path():
+			_on_back_pressed()

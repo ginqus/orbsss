@@ -1,0 +1,193 @@
+[gd_scene load_steps=19 format=3 uid="uid://bchj2ybit6amx"]
+
+[ext_resource type="Texture2D" uid="uid://ccirbq8bulyp2" path="res://Themes/frozen_dark/sprites/player.svg" id="1_06r5t"]
+[ext_resource type="Script" uid="uid://342djfx8woml" path="res://Scripts/player.gd" id="1_wd044"]
+[ext_resource type="Texture2D" uid="uid://b85y2wnus6rpy" path="res://Themes/frozen_dark/gui/healthbar_under.svg" id="3_mkkx1"]
+[ext_resource type="Texture2D" uid="uid://cymbvdms5fxs7" path="res://Themes/frozen_dark/gui/healthbar_over.svg" id="4_tt75r"]
+[ext_resource type="Texture2D" uid="uid://dfewap1tfsyed" path="res://Themes/frozen_dark/gui/healthbar_progress.svg" id="5_4byrv"]
+[ext_resource type="Texture2D" uid="uid://dmed80w3sdy2i" path="res://Themes/frozen_dark/gui/heart.svg" id="6_m8evy"]
+[ext_resource type="Texture2D" uid="uid://5kq38iyl7a52" path="res://Themes/frozen_dark/gui/healthbar_shadow.svg" id="7_4byrv"]
+[ext_resource type="Texture2D" uid="uid://bk0doiicpnv6p" path="res://Themes/frozen_dark/gui/stamina_under.svg" id="7_7s7rs"]
+[ext_resource type="Texture2D" uid="uid://cjxvnnppvdfue" path="res://Themes/frozen_dark/gui/stamina_progress.svg" id="8_fly5o"]
+[ext_resource type="Texture2D" uid="uid://cwctpclg2a7p5" path="res://Themes/frozen_dark/gui/hit_overlay.png" id="9_tt75r"]
+[ext_resource type="Texture2D" uid="uid://c2vp360lifgvl" path="res://Themes/frozen_dark/gui/stamina_shadow.svg" id="10_m8evy"]
+[ext_resource type="Texture2D" uid="uid://dpwynai0dduyr" path="res://Themes/frozen_dark/gui/coin.svg" id="12_7s7rs"]
+[ext_resource type="Theme" uid="uid://d3x48jpexgh64" path="res://Themes/frozen_dark/themes/title_nobg.tres" id="12_wcqo4"]
+[ext_resource type="Texture2D" uid="uid://cdk5qwvn3axvu" path="res://Themes/frozen_dark/gui/coin_shadow.svg" id="13_fly5o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnn0m"]
+radius = 24.0
+
+[sub_resource type="Curve" id="Curve_47rhn"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_cylhs"]
+colors = PackedColorArray(1, 1, 1, 0.498039, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_rd7p5"]
+offsets = PackedFloat32Array(0.8, 1)
+colors = PackedColorArray(1, 1, 1, 0.666667, 1, 1, 1, 0)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_wd044")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lnn0m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.74181e-06, 2.74181e-06)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_06r5t")
+
+[node name="Trail" type="Line2D" parent="."]
+top_level = true
+z_index = -1
+width = 8.0
+width_curve = SubResource("Curve_47rhn")
+gradient = SubResource("Gradient_cylhs")
+sharp_limit = 0.0
+antialiased = true
+
+[node name="Trajectory" type="Line2D" parent="."]
+top_level = true
+z_index = -1
+width = 2.0
+gradient = SubResource("Gradient_rd7p5")
+
+[node name="DamageCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="HitstopFlash" type="ColorRect" parent="HUD"]
+visible = false
+offset_left = -256.0
+offset_top = -480.0
+offset_right = 768.0
+offset_bottom = 1440.0
+color = Color(1, 1, 1, 0.294118)
+
+[node name="Healthbar" type="TextureProgressBar" parent="HUD"]
+offset_left = 48.0
+offset_top = 40.0
+offset_right = 304.0
+offset_bottom = 88.0
+pivot_offset = Vector2(128, 24)
+max_value = 3.0
+step = 0.0
+value = 3.0
+nine_patch_stretch = true
+texture_under = ExtResource("3_mkkx1")
+texture_over = ExtResource("4_tt75r")
+texture_progress = ExtResource("5_4byrv")
+
+[node name="Heart" type="TextureRect" parent="HUD/Healthbar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -32.0
+offset_right = 48.0
+offset_bottom = 40.0
+texture = ExtResource("6_m8evy")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Shadow" type="TextureRect" parent="HUD/Healthbar"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -56.0
+offset_right = 36.0
+offset_bottom = 56.0
+texture = ExtResource("7_4byrv")
+
+[node name="Stamina" type="TextureProgressBar" parent="HUD"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = -64.0
+offset_bottom = 160.0
+grow_horizontal = 2
+pivot_offset = Vector2(192, 16)
+step = 0.0
+value = 66.0
+nine_patch_stretch = true
+texture_under = ExtResource("7_7s7rs")
+texture_progress = ExtResource("8_fly5o")
+metadata/_edit_group_ = true
+
+[node name="Shadow" type="TextureRect" parent="HUD/Stamina"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -48.0
+offset_right = 36.0
+offset_bottom = 48.0
+texture = ExtResource("10_m8evy")
+
+[node name="HitOverlay" type="TextureRect" parent="HUD"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_tt75r")
+metadata/_edit_lock_ = true
+
+[node name="Coins" type="Label" parent="HUD"]
+offset_left = 92.0
+offset_top = 196.0
+offset_right = 159.0
+offset_bottom = 248.0
+pivot_offset = Vector2(-40, 24)
+theme = ExtResource("12_wcqo4")
+text = "0"
+metadata/_edit_group_ = true
+
+[node name="Coin" type="TextureRect" parent="HUD/Coins"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.522
+anchor_bottom = 0.522
+offset_left = -68.0
+offset_top = -31.144
+offset_right = -12.0
+offset_bottom = 24.856
+texture = ExtResource("12_7s7rs")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Coins/Coin"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("13_fly5o")
+
+[node name="Score" type="Label" parent="HUD"]
+offset_left = 160.0
+offset_top = 176.0
+offset_right = 352.0
+offset_bottom = 254.0
+theme = ExtResource("12_wcqo4")
+theme_override_colors/font_color = Color(0.85098, 0.886275, 0.996078, 1)
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1

@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://co5cbwrleu2tn"]
+
+[ext_resource type="Texture2D" uid="uid://dhgv1opyqxyxe" path="res://Themes/frozen_dark/sprites/orb_pieces.svg" id="1_1me8e"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1me8e"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_ld8hl"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.25, 1), 0.0, -2.89567, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_1me8e"]
+offsets = PackedFloat32Array(0, 0.333333, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.498039, 1, 1, 1, 0)
+metadata/_snap_enabled = true
+metadata/_snap_count = 3
+
+[sub_resource type="Curve" id="Curve_1me8e"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+material = SubResource("CanvasItemMaterial_1me8e")
+emitting = false
+amount = 12
+texture = ExtResource("1_1me8e")
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.95
+emission_shape = 1
+emission_sphere_radius = 32.0
+direction = Vector2(1, -0.5)
+spread = 90.0
+gravity = Vector2(0, 1960)
+initial_velocity_min = 256.0
+initial_velocity_max = 512.0
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+radial_accel_min = 100.0
+radial_accel_max = 100.0
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_ld8hl")
+color_ramp = SubResource("Gradient_1me8e")
+hue_variation_curve = SubResource("Curve_1me8e")
+anim_offset_max = 1.0

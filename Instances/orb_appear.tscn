@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkcu8e2agtvdh"]
+
+[ext_resource type="Texture2D" uid="uid://ba813t7hcb7q1" path="res://Particles/square.svg" id="1_787os"]
+
+[sub_resource type="Curve" id="Curve_3l27g"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_colgk"]
+_limits = [0.0, 4.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.747368, 4), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_3f8gr"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.747368, 1), 1.90895, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_2dwjc"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+emitting = false
+amount = 32
+texture = ExtResource("1_787os")
+one_shot = true
+speed_scale = 1.5
+explosiveness = 1.0
+local_coords = true
+emission_shape = 2
+emission_sphere_radius = 96.0
+gravity = Vector2(0, 0)
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+angular_velocity_curve = SubResource("Curve_3l27g")
+radial_accel_min = -500.0
+radial_accel_max = -400.0
+damping_min = 100.0
+damping_max = 100.0
+damping_curve = SubResource("Curve_colgk")
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_3f8gr")
+color_ramp = SubResource("Gradient_2dwjc")

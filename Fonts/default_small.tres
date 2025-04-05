@@ -1,0 +1,13 @@
+[gd_resource type="FontVariation" load_steps=4 format=3 uid="uid://cfqgdapfovl26"]
+
+[ext_resource type="FontFile" uid="uid://cn77g7nchvlyj" path="res://Fonts/NTSomic-Semibold.ttf" id="1_xkxx8"]
+[ext_resource type="FontFile" uid="uid://cfp4345kevkn3" path="res://Fonts/MaterialSymbols-Small.ttf" id="2_j6gno"]
+
+[sub_resource type="FontVariation" id="FontVariation_1qfev"]
+base_font = ExtResource("2_j6gno")
+baseline_offset = 0.08
+
+[resource]
+fallbacks = Array[Font]([SubResource("FontVariation_1qfev")])
+base_font = ExtResource("1_xkxx8")
+baseline_offset = -0.1

@@ -1,47 +1,29 @@
 extends StaticBody2D
 
-var orb_break_particle := load("res://Scenes/Prefabs/orb_break_particle.tscn")
-@onready var boss_1 := $/root/MainLevel/Boss1
-@onready var player := get_node_or_null("/root/MainLevel/Player")
-@onready var collision := $CollisionShape2D
-@onready var hitstop_flash := $"/root/MainLevel/UI/Hitstop flash"
-@onready var cam: Camera2D = $"/root/MainLevel/Camera"
-var tween
+
+var destroy_particle: PackedScene = preload("res://Particles/orb_break.tscn")
 
 
-func Destroy():
-	var orb_break_effect = orb_break_particle.instantiate()
-	get_tree().current_scene.add_child(orb_break_effect)
-	orb_break_effect.global_position = global_position
-	orb_break_effect.self_modulate = Color(0, 1, 0.25, 1)
-	orb_break_effect.emitting = true
+func _destroy(direction: Vector2) -> void:
 	queue_free()
+	var particle: CPUParticles2D = destroy_particle.instantiate()
+	get_tree().current_scene.add_child(particle)
+	particle.global_position = global_position
+	particle.emitting = true
+	particle.direction = direction
+	particle.color = GlobalVariables.green_orb_color
+	await particle.finished
 
 
-func Tween_To_Player():
-	if is_instance_valid(player): look_at(player.position)
-	var direction = Vector2(2000, 0).rotated(rotation)
-	tween = create_tween()
-	tween.tween_property(self, "global_position", global_position + direction, 1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
+func trigger(player: CharacterBody2D) -> void:
+	if player.haptics_enabled:
+		Input.vibrate_handheld(35)
+	player.velocity.y = (
+		-0.75 * Vector2(abs(player.velocity.x * 0.8), abs(player.velocity.y * 0.8 - 300)).length())
+	player.velocity.x /= 5
 
+	player.regenerate(1)
+	player.increase_stamina(75)
+	player.increase_score(10)
 
-func Parry():
-	collision.disabled = true
-	hitstop_flash.show()
-	tween.kill()
-	player.delta_factor = 0
-	if is_instance_valid(boss_1):
-		look_at(boss_1.global_position)
-		var timer = get_tree().create_timer(0.1, false, false, true)
-		timer.timeout.connect(boss_1.Damage)
-	var direction = Vector2(2000, 0).rotated(rotation)
-
-	cam.shake(5, 12, 4)
-	if player.haptics_enabled: Input.vibrate_handheld(60)
-	await get_tree().create_timer(0.25, false, false, true).timeout
-
-	hitstop_flash.hide()
-	if is_instance_valid(player): player.delta_factor = 1
-	tween = create_tween()
-	await tween.tween_property(self, "global_position", global_position + direction, 0.3).finished
-	queue_free()
+	_destroy(player.velocity.normalized())

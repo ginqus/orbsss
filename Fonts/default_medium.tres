@@ -1,0 +1,13 @@
+[gd_resource type="FontVariation" load_steps=4 format=3 uid="uid://ctjl15f170b46"]
+
+[ext_resource type="FontFile" uid="uid://cn77g7nchvlyj" path="res://Fonts/NTSomic-Semibold.ttf" id="1_t4e2s"]
+[ext_resource type="FontFile" uid="uid://bo8ut2vyiufb5" path="res://Fonts/MaterialSymbols-Medium.ttf" id="2_t4e2s"]
+
+[sub_resource type="FontVariation" id="FontVariation_t4e2s"]
+base_font = ExtResource("2_t4e2s")
+baseline_offset = 0.05
+
+[resource]
+fallbacks = Array[Font]([SubResource("FontVariation_t4e2s")])
+base_font = ExtResource("1_t4e2s")
+baseline_offset = -0.125
